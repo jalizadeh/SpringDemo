@@ -2,6 +2,7 @@ package com.jalizadeh;
 
 public class Triangle {
 	
+	/*
 	//video #5
 	private String type;
 	
@@ -45,7 +46,59 @@ public class Triangle {
 	}
 	//#6---------------------
 	
+	
 	public void draw() {
 		System.out.println(getType() + " Triangle drawn " + getHeight());
+	}
+	
+	*/
+	
+	//video #7
+	private Point point0;
+	private Point point1;
+	private Point point2;
+	
+	
+	
+	public Point getPoint0() {
+		return point0;
+	}
+
+
+
+	public Point getPoint1() {
+		return point1;
+	}
+
+
+
+	public Point getPoint2() {
+		return point2;
+	}
+
+
+
+	public void setPoint0(Point point0) {
+		this.point0 = point0;
+	}
+
+
+
+	public void setPoint1(Point point1) {
+		this.point1 = point1;
+	}
+
+
+
+	public void setPoint2(Point point2) {
+		this.point2 = point2;
+	}
+
+
+
+	public void drawPoint() {
+		System.out.println("A: " + point0);
+		System.out.println("B: " + point1);
+		System.out.println("C: " + point2);
 	}
 }
