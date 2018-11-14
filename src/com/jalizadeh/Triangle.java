@@ -1,5 +1,7 @@
 package com.jalizadeh;
 
+import java.util.List;
+
 public class Triangle {
 	
 	/*
@@ -53,6 +55,7 @@ public class Triangle {
 	
 	*/
 	
+	/*
 	//video #7
 	private Point point0;
 	private Point point1;
@@ -96,9 +99,29 @@ public class Triangle {
 
 
 
-	public void drawPoint() {
+	public void drawPoints() {
 		System.out.println("A: " + point0);
 		System.out.println("B: " + point1);
 		System.out.println("C: " + point2);
 	}
+	
+	*/
+	
+	
+	private List<Point> points;
+
+	public List<Point> getPoints() {
+		return points;
+	}
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
+	}
+	
+	public void drawPoints() {
+		for(Point p : points)
+			System.out.println("point: " + p);
+		
+	}
+	
 }

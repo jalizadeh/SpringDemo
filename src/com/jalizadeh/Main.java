@@ -29,7 +29,7 @@ public class Main {
 		//getBean by Id
 		Triangle triangle = (Triangle) context.getBean("triangle");		
 		//triangle.draw();
-		triangle.drawPoint();
+		triangle.drawPoints();
 		
 		//to prevent resource leak
 		context.close();

@@ -12,9 +12,19 @@
 		<!-- <constructor-arg index="0" value="Equilateral (by constructor)"/>
 		<constructor-arg index="1" type="int" value="20"/> -->
 		
-		<property name="point0" ref="pointA"></property>
+		<!-- video #7 -->
+		<!-- <property name="point0" ref="pointA"></property>
 		<property name="point1" ref="pointB"></property>
-		<property name="point2" ref="pointC"></property>
+		<property name="point2" ref="pointC"></property> -->
+		
+		<!-- video #8 -->
+		<property name="points">
+			<list>
+				<ref bean="pointA"/>
+				<ref bean="pointB"/>
+				<ref bean="pointC"/>
+			</list>
+		</property>
 	</bean>
 	
 	
