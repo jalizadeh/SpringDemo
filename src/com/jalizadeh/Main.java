@@ -27,7 +27,10 @@ public class Main {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		//getBean by Id
-		Triangle triangle = (Triangle) context.getBean("triangle");		
+		//Triangle triangle = (Triangle) context.getBean("triangle");		
+		
+		//or using alias
+		Triangle triangle = (Triangle) context.getBean("triangle-alias");
 		//triangle.draw();
 		triangle.drawPoints();
 		

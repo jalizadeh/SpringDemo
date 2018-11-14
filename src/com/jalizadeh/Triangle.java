@@ -55,8 +55,8 @@ public class Triangle {
 	
 	*/
 	
-	/*
-	//video #7
+	
+	//video #7 & #9
 	private Point point0;
 	private Point point1;
 	private Point point2;
@@ -105,9 +105,10 @@ public class Triangle {
 		System.out.println("C: " + point2);
 	}
 	
-	*/
 	
 	
+	
+	/*
 	private List<Point> points;
 
 	public List<Point> getPoints() {
@@ -123,5 +124,5 @@ public class Triangle {
 			System.out.println("point: " + p);
 		
 	}
-	
+	*/
 }

@@ -18,12 +18,33 @@
 		<property name="point2" ref="pointC"></property> -->
 		
 		<!-- video #8 -->
-		<property name="points">
+		<!-- <property name="points">
 			<list>
 				<ref bean="pointA"/>
 				<ref bean="pointB"/>
 				<ref bean="pointC"/>
 			</list>
+		</property> -->
+		
+		<!-- video #9 
+			Using inner beans
+			NOTE there is no id and ref -->
+		
+		<property name="point0" ref="pointA"/>
+	
+		
+		<property name="point1">
+			<bean class="com.jalizadeh.Point">
+				<property name="x" value="20"/>
+				<property name="y" value="0"/>
+			</bean>
+		</property>
+		
+		<property name="point2">
+			<bean class="com.jalizadeh.Point">
+				<property name="x" value="0"/>
+				<property name="y" value="20"/>
+			</bean>
 		</property>
 	</bean>
 	
@@ -43,5 +64,10 @@
 		<property name="x" value="0"/>
 		<property name="y" value="20"/>
 	</bean>
+	
+	
+	<!-- video #9
+	it will work exactly like triangle, like a ref -->
+	<alias name="triangle" alias="triangle-alias"/>
 	
 </beans>
