@@ -4,5 +4,8 @@
 <!-- it must be located in "src" folder -->
 
 <beans>
-	<bean id="triangle" class="com.jalizadeh.Triangle"></bean>
+	<bean id="triangle" class="com.jalizadeh.Triangle">
+		<!-- video #5 -->
+		<property name="type" value="Equilateral"></property>
+	</bean>
 </beans>
