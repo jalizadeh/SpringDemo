@@ -6,6 +6,10 @@
 <beans>
 	<bean id="triangle" class="com.jalizadeh.Triangle">
 		<!-- video #5 -->
-		<property name="type" value="Equilateral"></property>
+		<!-- <property name="type" value="Equilateral (by setter)"></property> -->
+		
+		<!-- video #6 -->
+		<constructor-arg index="0" value="Equilateral (by constructor)"/>
+		<constructor-arg index="1" type="int" value="20"/>
 	</bean>
 </beans>
