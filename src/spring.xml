@@ -4,57 +4,31 @@
 <!-- it must be located in "src" folder -->
 
 <beans>
-	<!-- video #10 
-	autowire is used for auto-assign the objects
-	"byName" can find each object by it`s name
-	"byType" looks at the class parameter, but can be used only for one item of each class  -->
-													   
-	<bean id="triangle" class="com.jalizadeh.Triangle" autowire="byName">
-	
-		<!-- video #5 -->
-		<!-- <property name="type" value="Equilateral (by setter)"></property> -->
-		
-		<!-- video #6 -->
-		<!-- <constructor-arg index="0" value="Equilateral (by constructor)"/>
-		<constructor-arg index="1" type="int" value="20"/> -->
-		
-		<!-- video #7 -->
-		<!-- <property name="point0" ref="pointA"></property>
-		<property name="point1" ref="pointB"></property>
-		<property name="point2" ref="pointC"></property> -->
-		
-		<!-- video #8 -->
-		<!-- <property name="points">
+	<!-- video 13 -->
+	<!-- Bean Definition Inheritance -->
+	<!-- "abstract" will make the bean not initializable, and be used only
+		 as a place to put premade things -->
+	<bean id="tParent" class="com.jalizadeh.Triangle" abstract="true">
+		<property name="point0" ref="pointA"/>
+		<!-- <property name="">
 			<list>
-				<ref bean="pointA"/>
-				<ref bean="pointB"/>
-				<ref bean="pointC"/>
+				<bean>...</bean>
 			</list>
 		</property> -->
-		
-		<!-- video #9 
-			Using inner beans
-			NOTE there is no id and ref -->
-		
-		<!-- <property name="point0" ref="pointA"/>
-	
-		
-		<property name="point1">
-			<bean class="com.jalizadeh.Point">
-				<property name="x" value="20"/>
-				<property name="y" value="0"/>
-			</bean>
-		</property>
-		
-		<property name="point2">
-			<bean class="com.jalizadeh.Point">
-				<property name="x" value="0"/>
-				<property name="y" value="20"/>
-			</bean>
-		</property> -->
-		
-		
 	</bean>
+
+	<!-- bean will use it`s parent`s defined beans. not needed to define point0 here -->
+	<bean id="triangle" class="com.jalizadeh.Triangle" parent="tParent">
+		<property name="point1" ref="pointB"/>
+		<property name="point2" ref="pointC"/>
+		<!-- 
+		<property name="">
+			<list merge="true">
+				<bean>...</bean>
+			</list>
+		</property> -->
+	</bean>
+	
 	
 	
 	<!-- video #7 - object injection -->
@@ -72,10 +46,5 @@
 		<property name="x" value="0"/>
 		<property name="y" value="20"/>
 	</bean>
-	
-	
-	<!-- video #9
-	it will work exactly like triangle, like a ref -->
-	<alias name="triangle" alias="triangle-alias"/>
 	
 </beans>
