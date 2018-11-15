@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 
-public class Triangle {
+public class Triangle implements InitializingBean, DisposableBean{
 	private Point point0;
 	private Point point1;
 	private Point point2;
@@ -56,6 +58,30 @@ public class Triangle {
 		System.out.println("B: " + point1);
 		System.out.println("C: " + point2);
 	}
+
+
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Init");
+		
+	}
+
+
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Disposed");
+		
+	}
 	
+	
+	public void myInit() {
+		System.out.println("My init run from xml");
+	}
+	
+	public void myDest() {
+		System.out.println("My Destroy");
+	}
 
 }

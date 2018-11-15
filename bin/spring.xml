@@ -18,7 +18,8 @@
 	</bean>
 
 	<!-- bean will use it`s parent`s defined beans. not needed to define point0 here -->
-	<bean id="triangle" class="com.jalizadeh.Triangle" parent="tParent">
+	<bean id="triangle" class="com.jalizadeh.Triangle" 
+		parent="tParent" init-method="myInit" destroy-method="myDest">
 		<property name="point1" ref="pointB"/>
 		<property name="point2" ref="pointC"/>
 		<!-- 
