@@ -2,7 +2,15 @@ package com.jalizadeh;
 
 import java.util.List;
 
-public class Triangle {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+						//video #12
+public class Triangle implements ApplicationContextAware, BeanNameAware{
+	
+	
 	
 	/*
 	//video #5
@@ -135,6 +143,20 @@ public class Triangle {
 		System.out.println("A: " + pointA);
 		System.out.println("B: " + pointB);
 		System.out.println("C: " + pointC);
+	}
+	
+	//video #12 
+	private ApplicationContext context;
+	
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		this.context = context;
+		//System.out.println("context: " + context.getDisplayName());
+	}
+	@Override
+	public void setBeanName(String beanName) {
+		System.out.println("Bean name is: " + beanName);
+		
 	}
 	
 	
