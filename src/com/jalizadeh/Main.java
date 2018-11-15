@@ -17,7 +17,6 @@ public class Main {
 		
 		//getBean by Id
 		Triangle triangle = (Triangle) context.getBean("triangle");		
-		
 
 		triangle.drawPoints();
 		

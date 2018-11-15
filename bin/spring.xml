@@ -48,4 +48,9 @@
 		<property name="y" value="20"/>
 	</bean>
 	
+	
+	<!-- video #15 -->
+	<!-- it doesn`t need any id, it wont be referenced -->
+	<bean class="com.jalizadeh.DisplaynameBeanpostProcessor">
+	</bean>
 </beans>
