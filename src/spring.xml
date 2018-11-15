@@ -4,7 +4,13 @@
 <!-- it must be located in "src" folder -->
 
 <beans>
-	<bean id="triangle" class="com.jalizadeh.Triangle">
+	<!-- video #10 
+	autowire is used for auto-assign the objects
+	"byName" can find each object by it`s name
+	"byType" looks at the class parameter, but can be used only for one item of each class  -->
+													   
+	<bean id="triangle" class="com.jalizadeh.Triangle" autowire="byName">
+	
 		<!-- video #5 -->
 		<!-- <property name="type" value="Equilateral (by setter)"></property> -->
 		
@@ -30,7 +36,7 @@
 			Using inner beans
 			NOTE there is no id and ref -->
 		
-		<property name="point0" ref="pointA"/>
+		<!-- <property name="point0" ref="pointA"/>
 	
 		
 		<property name="point1">
@@ -45,7 +51,9 @@
 				<property name="x" value="0"/>
 				<property name="y" value="20"/>
 			</bean>
-		</property>
+		</property> -->
+		
+		
 	</bean>
 	
 	

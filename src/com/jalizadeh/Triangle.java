@@ -57,7 +57,7 @@ public class Triangle {
 	
 	
 	//video #7 & #9
-	private Point point0;
+	/*private Point point0;
 	private Point point1;
 	private Point point2;
 	
@@ -104,7 +104,38 @@ public class Triangle {
 		System.out.println("B: " + point1);
 		System.out.println("C: " + point2);
 	}
+	*/
 	
+	
+	
+	//video #10
+	private Point pointA;
+	private Point pointB;
+	private Point pointC;
+	public Point getPointA() {
+		return pointA;
+	}
+	public Point getPointB() {
+		return pointB;
+	}
+	public Point getPointC() {
+		return pointC;
+	}
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
+	}
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
+	}
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
+	}
+	
+	public void drawPoints() {
+		System.out.println("A: " + pointA);
+		System.out.println("B: " + pointB);
+		System.out.println("C: " + pointC);
+	}
 	
 	
 	
