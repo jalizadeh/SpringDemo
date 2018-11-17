@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle implements Shape {
 	private Point point0;
 	private Point point1;
 	private Point point2;
@@ -62,26 +62,12 @@ public class Triangle implements InitializingBean, DisposableBean{
 
 
 	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("Init");
+	public void draw() {
+		System.out.println("Drawing tirangle");
+		System.out.println("A: " + point0);
+		System.out.println("B: " + point1);
+		System.out.println("C: " + point2);
 		
-	}
-
-
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("Disposed");
-		
-	}
-	
-	
-	public void myInit() {
-		System.out.println("My init run from xml");
-	}
-	
-	public void myDest() {
-		System.out.println("My Destroy");
 	}
 
 }

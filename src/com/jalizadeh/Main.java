@@ -15,10 +15,10 @@ public class Main {
 		//xml must be located in "src" folder
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
-		//getBean by Id
-		Triangle triangle = (Triangle) context.getBean("triangle");		
 
-		triangle.drawPoints();
+		//video #17
+		Shape shape = (Shape) context.getBean("triangle");		
+		shape.draw();
 		
 		//to prevent resource leak
 		context.close();

@@ -4,38 +4,17 @@
 <!-- it must be located in "src" folder -->
 
 <beans>
-	<!-- video 13 -->
-	<!-- Bean Definition Inheritance -->
-	<!-- "abstract" will make the bean not initializable, and be used only
-		 as a place to put premade things -->
-	<bean id="tParent" class="com.jalizadeh.Triangle" abstract="true">
+	<bean id="triangle" class="com.jalizadeh.Triangle" >
 		<property name="point0" ref="pointA"/>
-		<!-- <property name="">
-			<list>
-				<bean>...</bean>
-			</list>
-		</property> -->
-	</bean>
-
-	<!-- bean will use it`s parent`s defined beans. not needed to define point0 here -->
-	<bean id="triangle" class="com.jalizadeh.Triangle" 
-		parent="tParent" init-method="myInit" destroy-method="myDest">
 		<property name="point1" ref="pointB"/>
 		<property name="point2" ref="pointC"/>
-		<!-- 
-		<property name="">
-			<list merge="true">
-				<bean>...</bean>
-			</list>
-		</property> -->
 	</bean>
-	
 	
 	
 	<!-- video #7 - object injection -->
 	<bean id="pointA" class="com.jalizadeh.Point">
-		<property name="x" value="${pointA.pointX}"/>
-		<property name="y" value="${pointA.pointY}"/>
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
 	</bean>
 	
 	<bean id="pointB" class="com.jalizadeh.Point">
@@ -49,10 +28,9 @@
 	</bean>
 	
 	
-	<!-- video #16 -->
-	<!-- <bean class="com.jalizadeh.MyBeanFactoryPP"/> -->
-	
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations" value="pointsconfig.properties"/>
+	<!-- video #17 -->
+	<bean id="circle" class="com.jalizadeh.Circle" >
+		<property name="center" ref="pointA"/>
 	</bean>
+	
 </beans>
