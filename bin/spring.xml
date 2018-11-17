@@ -34,8 +34,8 @@
 	
 	<!-- video #7 - object injection -->
 	<bean id="pointA" class="com.jalizadeh.Point">
-		<property name="x" value="0"/>
-		<property name="y" value="0"/>
+		<property name="x" value="${pointA.pointX}"/>
+		<property name="y" value="${pointA.pointY}"/>
 	</bean>
 	
 	<bean id="pointB" class="com.jalizadeh.Point">
@@ -49,8 +49,10 @@
 	</bean>
 	
 	
-	<!-- video #15 -->
-	<!-- it doesn`t need any id, it wont be referenced -->
-	<bean class="com.jalizadeh.DisplaynameBeanpostProcessor">
+	<!-- video #16 -->
+	<!-- <bean class="com.jalizadeh.MyBeanFactoryPP"/> -->
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties"/>
 	</bean>
 </beans>
