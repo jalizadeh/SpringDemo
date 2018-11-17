@@ -1,5 +1,7 @@
 package com.jalizadeh;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Circle implements Shape {
@@ -14,16 +16,9 @@ public class Circle implements Shape {
 
 
 
-	/*
-	 * video #18
-	 * 
-	 * Using annotation "Required", forces the Spring to raise the exception
-	 * before calling the "shape.draw();"
-	 * This way, it will show which bean is missed or NULL
-	 * Otherwise, there is only "NULLPOINTEREXCEPTION" error without
-	 * being identified, which line is producing the error
-	 */
-	@Required
+	//video #19
+	@Autowired
+	@Qualifier("circleRelated")
 	public void setCenter(Point center) {
 		this.center = center;
 	}

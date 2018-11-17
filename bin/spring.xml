@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- disabled in video 19 -->
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> -->
 
 <!-- it must be located in "src" folder -->
 
-<beans>
-	<bean id="triangle" class="com.jalizadeh.Triangle" >
+<!-- changed for video 19 -->
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" 
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	 
+	 
+	<!-- <bean id="triangle" class="com.jalizadeh.Triangle" >
 		<property name="point0" ref="pointA"/>
 		<property name="point1" ref="pointB"/>
 		<property name="point2" ref="pointC"/>
-	</bean>
+	</bean> -->
 	
 	
 	<!-- video #7 - object injection -->
 	<bean id="pointA" class="com.jalizadeh.Point">
+		<qualifier value="circleRelated" />
 		<property name="x" value="0"/>
 		<property name="y" value="0"/>
 	</bean>
@@ -30,10 +40,15 @@
 	
 	<!-- video #17 -->
 	<bean id="circle" class="com.jalizadeh.Circle" >
-		<property name="center" ref="pointA"/>	
+		<!-- <property name="center" ref="pointA"/>	 -->
 	</bean>
 	
 	<!-- video #18 -->
-	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->
+	
+	<!-- video #19 -->
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
+	<!-- or use this to manage all annotations -->
+	<context:annotation-config/>
 	
 </beans>
