@@ -17,7 +17,7 @@ public class Main {
 		
 
 		//video #17
-		Shape shape = (Shape) context.getBean("triangle");		
+		Shape shape = (Shape) context.getBean("circle");		
 		shape.draw();
 		
 		//to prevent resource leak
