@@ -38,10 +38,10 @@
 	</bean>
 	
 	
-	<!-- video #17 -->
-	<bean id="circle" class="com.jalizadeh.Circle" >
-		<!-- <property name="center" ref="pointA"/>	 -->
-	</bean>
+	<!-- video #21 -->
+	<!-- <bean id="circle" class="com.jalizadeh.Circle" > </bean> -->
+	<!-- instead, I will use in-class annotation, but here I have to tell the spring to check package -->
+	<context:component-scan base-package="com.jalizadeh" />
 	
 	<!-- video #18 -->
 	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->

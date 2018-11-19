@@ -7,7 +7,12 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
 
+
+// video #21
+// https://www.journaldev.com/21429/spring-component
+@Component
 public class Circle implements Shape {
 
 	private Point center;
