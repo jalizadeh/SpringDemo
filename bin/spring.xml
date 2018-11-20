@@ -51,4 +51,14 @@
 	<!-- or use this to manage all annotations -->
 	<context:annotation-config/>
 	
+	
+	<!-- video #22 -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>mymessages</value>
+			</list> 
+		</property>
+	</bean>
+	
 </beans>

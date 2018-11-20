@@ -21,6 +21,10 @@ public class Main {
 		shape.draw();
 		
 		
+		//video #22
+		//load it here, or can be loaded in Circle.class
+		//System.out.println(context.getMessage("greeting", null, "Default msg", null));
+		
 		/**
 		 * The ApplicationContext class doesn't define either of these methods as a part of 
 		 * its interface, but the ConfigurableApplicationContext does define both of these.
