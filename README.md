@@ -32,4 +32,20 @@ Spring Tutorial 27 - Writing Our First Aspect Part 2\
 Spring Tutorial 28 - Pointcuts and Wildcard Expressions\
 Spring Tutorial 29 - A Few More Pointcut Expressions\
 Spring Tutorial 30 - JoinPoints and Advice Arguments\
-Spring Tutorial 31 - After Advice Types
+Spring Tutorial 31 - After Advice Types\
+Spring Tutorial 32 - Around Advice Type\
+Spring Tutorial 33 - Naming Conventions and Custom Advice Annotations\
+Spring Tutorial 34 - AOP XML configuration\
+Spring Tutorial 35 - Understanding AOP Proxies\
+Spring Tutorial 36 - Introduction to Spring Data and Setting Up\
+Spring Tutorial 37 - Using JDBC without Spring\
+Spring Tutorial 38 - Adding Spring and DataSource Configuration\
+Spring Tutorial 39 - Using JdbcTemplate\
+Spring Tutorial 40 - Returning Other Datatypes from JdbcTemplate\
+Spring Tutorial 41 - Implementing RowMapper\
+Spring Tutorial 42 - Performing Write Operations with JdbcTemplate\
+Spring Tutorial 43 - Named Parameter JDBC Template\
+Spring Tutorial 44 - DAO Support Classes\
+Spring Tutorial 45 - Using Hibernate with Spring\
+Spring Tutorial 46 - Spring MVC Login Form with Hibernate in Eclips\
+Spring Tutorial 47 - Add,Edit,Delete,Search using Spring and Hibernate

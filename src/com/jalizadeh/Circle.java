@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +16,10 @@ import org.springframework.stereotype.Component;
 // video #21
 // https://www.journaldev.com/21429/spring-component
 @Component
-public class Circle implements Shape {
+public class Circle implements Shape,ApplicationEventPublisherAware {
 
 	private Point center;
+	private ApplicationEventPublisher publisher;
 	
 	@Autowired
 	private MessageSource messageSource;
@@ -73,6 +76,19 @@ public class Circle implements Shape {
 				new Object[] {center.getX(), center.getY()}
 				, "Default msg", null));
 		System.out.println(this.messageSource.getMessage("greeting", null, "Default msg", null));
+		
+		
+		//video #23
+		DrawEvent de = new DrawEvent(this);
+		publisher.publishEvent(de);
+	}
+
+
+	//video #23
+	@Override
+	public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
+		this.publisher = publisher;
+		
 	}
 	
 }
